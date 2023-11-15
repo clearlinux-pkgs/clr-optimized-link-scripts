@@ -28,3 +28,4 @@ install -m 0644 scripts.ld/* %{buildroot}/usr/share/clear/optimized-link-scripts
 /usr/share/clear/optimized-link-scripts/clear_ordering_map.ld
 /usr/share/clear/optimized-link-scripts/scripts.gold/*
 /usr/share/clear/optimized-link-scripts/scripts.ld/*
+
