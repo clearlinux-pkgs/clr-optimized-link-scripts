@@ -1,7 +1,7 @@
 Name:           clr-optimized-link-scripts
 Version:        2
 Release:        2
-Source0:        http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-%{version}.tar.xz
+Source0:        http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-2.tar.xz
 License:        Apache-2.0
 Summary:        Optimized scripts for linking
 Url:            https://clearlinux.org/
