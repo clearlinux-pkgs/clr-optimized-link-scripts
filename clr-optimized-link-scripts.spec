@@ -6,10 +6,10 @@
 # autospec commit: e661f3a
 #
 Name     : clr-optimized-link-scripts
-Version  : 4
-Release  : 4
-URL      : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v4.tar.xz
-Source0  : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v4.tar.xz
+Version  : 5
+Release  : 5
+URL      : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v5.tar.xz
+Source0  : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v5.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -46,15 +46,15 @@ license components for the clr-optimized-link-scripts package.
 
 
 %prep
-%setup -q -n clr-optimized-link-scripts-v4
-cd %{_builddir}/clr-optimized-link-scripts-v4
+%setup -q -n clr-optimized-link-scripts-v5
+cd %{_builddir}/clr-optimized-link-scripts-v5
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1700061176
+export SOURCE_DATE_EPOCH=1700665586
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -87,7 +87,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1700061176
+export SOURCE_DATE_EPOCH=1700665586
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-optimized-link-scripts
 cp %{_builddir}/clr-optimized-link-scripts-v%{version}/LICENSE %{buildroot}/usr/share/package-licenses/clr-optimized-link-scripts/8532c6d849f68016e932ae7abee616ac9c5d5d4e || :
@@ -167,7 +167,6 @@ cp %{_builddir}/clr-optimized-link-scripts-v%{version}/LICENSE %{buildroot}/usr/
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libcrypto.so.3.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libevent_core-2.1.so.7.0.1.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libexpat.so.1.8.10.ld
-/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libgcc_s.so.1.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libgcrypt.so.20.4.2.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libgmp.so.10.4.1.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libgpg-error.so.0.34.0.ld
@@ -178,7 +177,6 @@ cp %{_builddir}/clr-optimized-link-scripts-v%{version}/LICENSE %{buildroot}/usr/
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libpcre2-8.so.0.11.2.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libproc2.so.0.0.2.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libsnappy.so.1.1.10.ld
-/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libstdc++.so.6.0.32.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libsystemd.so.0.35.0.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libvulkan.so.1.3.269.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libxml2.so.2.11.5.ld
