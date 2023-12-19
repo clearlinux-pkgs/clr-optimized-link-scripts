@@ -7,7 +7,7 @@
 #
 Name     : clr-optimized-link-scripts
 Version  : 5
-Release  : 6
+Release  : 7
 URL      : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v5.tar.xz
 Source0  : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v5.tar.xz
 Summary  : No detailed summary available
@@ -54,7 +54,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1701943130
+export SOURCE_DATE_EPOCH=1702945308
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -87,11 +87,14 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1701943130
+export SOURCE_DATE_EPOCH=1702945308
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-optimized-link-scripts
 cp %{_builddir}/clr-optimized-link-scripts-v%{version}/LICENSE %{buildroot}/usr/share/package-licenses/clr-optimized-link-scripts/8532c6d849f68016e932ae7abee616ac9c5d5d4e || :
 %make_install
+## Remove excluded files
+rm -f %{buildroot}*/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--glibc-hwcaps--x86-64-v3--libc.so.6.ld
+rm -f %{buildroot}*/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--ld-2.38.so.ld
 
 %files
 %defattr(-,root,root,-)
@@ -158,9 +161,7 @@ cp %{_builddir}/clr-optimized-link-scripts-v%{version}/LICENSE %{buildroot}/usr/
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--bin--tmux.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--bin--vulkaninfo.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--extensions--no-debug-non-zts-20220829--opcache.so.ld
-/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--glibc-hwcaps--x86-64-v3--libc.so.6.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--glibc-hwcaps--x86-64-v3--libm.so.6.ld
-/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--ld-2.38.so.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libLLVM-16.so.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libassuan.so.0.8.6.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libclang-cpp.so.16.ld
