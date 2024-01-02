@@ -6,10 +6,10 @@
 # autospec commit: c1050fe
 #
 Name     : clr-optimized-link-scripts
-Version  : 5
-Release  : 7
-URL      : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v5.tar.xz
-Source0  : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v5.tar.xz
+Version  : 6
+Release  : 8
+URL      : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v6.tar.xz
+Source0  : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v6.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -46,15 +46,15 @@ license components for the clr-optimized-link-scripts package.
 
 
 %prep
-%setup -q -n clr-optimized-link-scripts-v5
-cd %{_builddir}/clr-optimized-link-scripts-v5
+%setup -q -n clr-optimized-link-scripts-v6
+cd %{_builddir}/clr-optimized-link-scripts-v6
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1702945308
+export SOURCE_DATE_EPOCH=1704214232
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -87,7 +87,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1702945308
+export SOURCE_DATE_EPOCH=1704214232
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-optimized-link-scripts
 cp %{_builddir}/clr-optimized-link-scripts-v%{version}/LICENSE %{buildroot}/usr/share/package-licenses/clr-optimized-link-scripts/8532c6d849f68016e932ae7abee616ac9c5d5d4e || :
@@ -178,11 +178,8 @@ rm -f %{buildroot}*/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libpcre2-8.so.0.11.2.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libproc2.so.0.0.2.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libsnappy.so.1.1.10.ld
-/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libsystemd.so.0.35.0.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libvulkan.so.1.3.269.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--libxml2.so.2.11.5.ld
-/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--systemd--libsystemd-core-252.so.ld
-/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--systemd--libsystemd-shared-252.so.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--usr--libexec--sudo--libsudo_util.so.0.0.0.ld
 /usr/share/clear/optimized-link-scripts/scripts.ld/--var--lib--phoronix-test-suite--installed-tests--pts--leveldb-1.1.0--leveldb-1.23--build--db_bench.ld
 
