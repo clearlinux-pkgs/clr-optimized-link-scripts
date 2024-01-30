@@ -6,10 +6,10 @@
 # autospec commit: fae1327
 #
 Name     : clr-optimized-link-scripts
-Version  : 11
-Release  : 12
-URL      : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v11.tar.xz
-Source0  : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v11.tar.xz
+Version  : 13
+Release  : 13
+URL      : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v13.tar.xz
+Source0  : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v13.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -46,15 +46,15 @@ license components for the clr-optimized-link-scripts package.
 
 
 %prep
-%setup -q -n clr-optimized-link-scripts-v11
-cd %{_builddir}/clr-optimized-link-scripts-v11
+%setup -q -n clr-optimized-link-scripts-v13
+cd %{_builddir}/clr-optimized-link-scripts-v13
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1706550175
+export SOURCE_DATE_EPOCH=1706629306
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -87,7 +87,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1706550175
+export SOURCE_DATE_EPOCH=1706629306
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-optimized-link-scripts
 cp %{_builddir}/clr-optimized-link-scripts-v%{version}/LICENSE %{buildroot}/usr/share/package-licenses/clr-optimized-link-scripts/8532c6d849f68016e932ae7abee616ac9c5d5d4e || :
@@ -172,8 +172,12 @@ rm -f %{buildroot}*/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib
 /usr/share/clear/optimized-link-scripts/scripts.gold/__home__arjan__.phoronix-test-suite__installed-tests__pts__pgbench-1.14.0__pg___lib__libpq.so.5.16.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__home__arjan__.phoronix-test-suite__installed-tests__pts__redis-1.4.0__redis-7.0.4__src__redis-benchmark.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__home__arjan__.phoronix-test-suite__installed-tests__pts__redis-1.4.0__redis-7.0.4__src__redis-server.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.gold/__home__arjan__.phoronix-test-suite__installed-tests__pts__simdjson-2.0.1__simdjson-2.0.4__build__benchmark__bench_ondemand.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__home__arjan__.phoronix-test-suite__installed-tests__pts__stress-ng-1.11.0__stress-ng-0.16.04__stress-ng.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.gold/__home__arjan__.phoronix-test-suite__installed-tests__pts__synthmark-1.0.1__synthmark-master__synthmark.app.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__home__arjan__.phoronix-test-suite__installed-tests__pts__tjbench-1.2.0__libjpeg-turbo-2.1.0__build__libturbojpeg.so.0.2.0.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.gold/__home__arjan__.phoronix-test-suite__installed-tests__pts__uvg266-1.0.0__uvg266-0.4.1__build__libuvg266.so.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.gold/__home__arjan__.phoronix-test-suite__installed-tests__pts__uvg266-1.0.0__uvg266-0.4.1__build__uvg266.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__home__arjan__.phoronix-test-suite__installed-tests__pts__vpxenc-3.2.0__vpx__bin__vpxenc.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__home__arjan__.phoronix-test-suite__installed-tests__pts__vpxenc-3.2.0__vpx__lib__libvpx.so.8.0.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__home__arjan__.phoronix-test-suite__installed-tests__pts__webp-1.2.0__libwebp-1.2.4__examples__.libs__cwebp.ld.patch
@@ -400,15 +404,18 @@ rm -f %{buildroot}*/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgimpui-2.0.so.0.1000.36.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgimpwidgets-2.0.so.0.1000.36.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgio-2.0.so.0.7800.3.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgio-2.0.so.0.7800.4.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgirepository-1.0.so.1.0.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgjs.so.0.0.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libglib-2.0.so.0.7800.3.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libglib-2.0.so.0.7800.4.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgmodule-2.0.so.0.7800.3.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgmp.so.10.4.1.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgnome-desktop-3.so.20.0.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgnome-desktop-4.so.2.1.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgnutls.so.30.37.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgobject-2.0.so.0.7800.3.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgobject-2.0.so.0.7800.4.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgomp.so.1.0.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgpg-error.so.0.34.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libgraphene-1.0.so.0.1000.8.ld.patch
@@ -482,6 +489,7 @@ rm -f %{buildroot}*/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libuv.so.1.0.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libva.so.2.2000.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libvulkan.so.1.3.270.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libvulkan.so.1.3.275.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libvulkan_intel.so.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libvulkan_radeon.so.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.gold/__usr__lib64__libwacom.so.9.0.0.ld.patch
@@ -630,8 +638,12 @@ rm -f %{buildroot}*/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib
 /usr/share/clear/optimized-link-scripts/scripts.ld/__home__arjan__.phoronix-test-suite__installed-tests__pts__openssl-3.1.0__openssl-3.1.0__libssl.so.3.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__home__arjan__.phoronix-test-suite__installed-tests__pts__redis-1.4.0__redis-7.0.4__src__redis-benchmark.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__home__arjan__.phoronix-test-suite__installed-tests__pts__redis-1.4.0__redis-7.0.4__src__redis-server.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.ld/__home__arjan__.phoronix-test-suite__installed-tests__pts__simdjson-2.0.1__simdjson-2.0.4__build__benchmark__bench_ondemand.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__home__arjan__.phoronix-test-suite__installed-tests__pts__stress-ng-1.11.0__stress-ng-0.16.04__stress-ng.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.ld/__home__arjan__.phoronix-test-suite__installed-tests__pts__synthmark-1.0.1__synthmark-master__synthmark.app.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__home__arjan__.phoronix-test-suite__installed-tests__pts__tjbench-1.2.0__libjpeg-turbo-2.1.0__build__libturbojpeg.so.0.2.0.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.ld/__home__arjan__.phoronix-test-suite__installed-tests__pts__uvg266-1.0.0__uvg266-0.4.1__build__libuvg266.so.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.ld/__home__arjan__.phoronix-test-suite__installed-tests__pts__uvg266-1.0.0__uvg266-0.4.1__build__uvg266.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__home__arjan__.phoronix-test-suite__installed-tests__pts__vpxenc-3.2.0__vpx__bin__vpxenc.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__home__arjan__.phoronix-test-suite__installed-tests__pts__vpxenc-3.2.0__vpx__lib__libvpx.so.8.0.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__home__arjan__.phoronix-test-suite__installed-tests__pts__webp-1.2.0__libwebp-1.2.4__src__.libs__libwebp.so.7.1.5.ld.patch
@@ -802,11 +814,14 @@ rm -f %{buildroot}*/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libgimpconfig-2.0.so.0.1000.36.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libgimpui-2.0.so.0.1000.36.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libgio-2.0.so.0.7800.3.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libgio-2.0.so.0.7800.4.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libglib-2.0.so.0.7800.3.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libglib-2.0.so.0.7800.4.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libgmodule-2.0.so.0.7800.3.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libgmp.so.10.4.1.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libgnutls.so.30.37.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libgobject-2.0.so.0.7800.3.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libgobject-2.0.so.0.7800.4.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libgomp.so.1.0.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libgpg-error.so.0.34.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libgssapi_krb5.so.2.2.ld.patch
@@ -855,7 +870,9 @@ rm -f %{buildroot}*/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libudev.so.1.7.8.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libuv.so.1.0.0.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libvulkan.so.1.3.270.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libvulkan.so.1.3.275.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libvulkan_intel.so.ld.patch
+/usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libvulkan_radeon.so.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libx265.so.199.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libxml2.so.2.11.5.ld.patch
 /usr/share/clear/optimized-link-scripts/scripts.ld/__usr__lib64__libxslt.so.1.1.34.ld.patch
