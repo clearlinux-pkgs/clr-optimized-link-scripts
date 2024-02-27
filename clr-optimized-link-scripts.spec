@@ -7,7 +7,7 @@
 #
 Name     : clr-optimized-link-scripts
 Version  : 14
-Release  : 14
+Release  : 15
 URL      : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v14.tar.xz
 Source0  : http://localhost/cgit/projects/clr-optimized-link-scripts/snapshot/clr-optimized-link-scripts-v14.tar.xz
 Summary  : No detailed summary available
@@ -54,7 +54,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1709053768
+export SOURCE_DATE_EPOCH=1709053952
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -88,16 +88,13 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1709053768
+export SOURCE_DATE_EPOCH=1709053952
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-optimized-link-scripts
 cp %{_builddir}/clr-optimized-link-scripts-v%{version}/LICENSE %{buildroot}/usr/share/package-licenses/clr-optimized-link-scripts/8532c6d849f68016e932ae7abee616ac9c5d5d4e || :
 export GOAMD64=v2
 GOAMD64=v2
 %make_install
-## Remove excluded files
-rm -f %{buildroot}*/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--glibc-hwcaps--x86-64-v3--libc.so.6.ld
-rm -f %{buildroot}*/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--ld-2.38.so.ld
 
 %files
 %defattr(-,root,root,-)

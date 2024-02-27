@@ -1,4 +1,2 @@
 # This file contains the output files that need %exclude. Full path
 # names, one per line.
-/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--glibc-hwcaps--x86-64-v3--libc.so.6.ld
-/usr/share/clear/optimized-link-scripts/scripts.ld/--usr--lib64--ld-2.38.so.ld
